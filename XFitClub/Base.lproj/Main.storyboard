@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="HWq-P6-Y6b">
+            <objects>
+                <tabBarController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4iV-5d-SSV" customClass="MainTabBarViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" backgroundImage="tabbar_background" id="uoY-Wg-27w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZVe-Zb-pqb" kind="relationship" relationship="viewControllers" id="A2b-TD-WOw"/>
+                        <segue destination="HgS-iu-bwK" kind="relationship" relationship="viewControllers" id="AE1-dm-hzF"/>
+                        <segue destination="qkW-WY-Czn" kind="relationship" relationship="viewControllers" id="TC6-Sz-sZe"/>
+                        <segue destination="Z6g-pl-6KE" kind="relationship" relationship="viewControllers" id="f1W-93-G7H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OkX-hl-0Vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2002" y="-373"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="xda-pk-tg1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="ZVe-Zb-pqb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="tabbar_home_unselected" selectedImage="tabbar_home_selected" id="GQ0-CQ-hYo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2az-lt-9TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1319" y="-557"/>
+        </scene>
+        <!--Train-->
+        <scene sceneID="po5-bX-U2h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Train" id="HgS-iu-bwK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tH8-IO-J1J"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bg-gK-xOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1324" y="-480"/>
+        </scene>
+        <!--Challenge-->
+        <scene sceneID="Qak-cb-UcT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Challenge" id="qkW-WY-Czn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="挑战未选" selectedImage="挑战状态" id="bkL-je-PbF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biy-bZ-gL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1300" y="-373"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="Xn2-Ut-UvZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Find" id="Z6g-pl-6KE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0XR-46-tgZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fs-ht-MLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1328" y="-288"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_background" width="375" height="50"/>
+        <image name="tabbar_home_selected" width="26" height="42"/>
+        <image name="tabbar_home_unselected" width="26" height="42"/>
+        <image name="挑战未选" width="25" height="37"/>
+        <image name="挑战状态" width="25" height="37"/>
+    </resources>
+</document>

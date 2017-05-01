@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="gTV-IL-0wX" customClass="VideoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-Rh-eei">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="102.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yqc-Rh-eei" secondAttribute="height" multiplier="5:3" id="xE4-cW-M16"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="俯卧撑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-ME-tCt">
+                        <rect key="frame" x="0.0" y="102.5" width="171" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="02Q-ME-tCt" secondAttribute="trailing" id="6gX-UM-5Ak"/>
+                <constraint firstAttribute="bottom" secondItem="02Q-ME-tCt" secondAttribute="bottom" id="Knj-Hm-21W"/>
+                <constraint firstAttribute="trailing" secondItem="yqc-Rh-eei" secondAttribute="trailing" id="X4m-1K-ZHC"/>
+                <constraint firstItem="02Q-ME-tCt" firstAttribute="top" secondItem="yqc-Rh-eei" secondAttribute="bottom" id="ZWF-f4-9Nu"/>
+                <constraint firstItem="yqc-Rh-eei" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b1D-EC-YJG"/>
+                <constraint firstItem="yqc-Rh-eei" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="brG-x5-FR7"/>
+                <constraint firstItem="02Q-ME-tCt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pa2-Vj-NyA"/>
+            </constraints>
+            <size key="customSize" width="171" height="134"/>
+            <connections>
+                <outlet property="videoImage" destination="yqc-Rh-eei" id="raO-Vn-Zat"/>
+                <outlet property="videoName" destination="02Q-ME-tCt" id="ToO-o5-gNu"/>
+            </connections>
+            <point key="canvasLocation" x="94.5" y="120"/>
+        </collectionViewCell>
+    </objects>
+</document>

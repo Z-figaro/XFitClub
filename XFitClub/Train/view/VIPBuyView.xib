@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VIPBuyView">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="186"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-Do-J0Z">
+                    <rect key="frame" x="0.0" y="0.0" width="336" height="186"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train_VIPInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Vli-fh-rzv">
+                            <rect key="frame" x="0.0" y="0.0" width="336" height="186"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Vli-fh-rzv" secondAttribute="height" multiplier="526:291" id="Fef-Vw-11g"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWP-IR-aya">
+                            <rect key="frame" x="0.0" y="141" width="168" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="rf4-D1-QuS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="jZj-BP-EpK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB3-75-gSL">
+                            <rect key="frame" x="168" y="141" width="168" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Xrw-gR-Q58"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="购买会员" image="train_home_menberLogo">
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="goBuyVipButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="1m0-ro-lcX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pB3-75-gSL" secondAttribute="bottom" id="0TK-78-LBj"/>
+                        <constraint firstItem="TWP-IR-aya" firstAttribute="leading" secondItem="yR6-Do-J0Z" secondAttribute="leading" id="4kA-uq-Iyj"/>
+                        <constraint firstAttribute="trailing" secondItem="Vli-fh-rzv" secondAttribute="trailing" id="VrO-Av-LcE"/>
+                        <constraint firstItem="TWP-IR-aya" firstAttribute="width" secondItem="Vli-fh-rzv" secondAttribute="width" multiplier="0.5" id="WAe-1f-07f"/>
+                        <constraint firstAttribute="bottom" secondItem="TWP-IR-aya" secondAttribute="bottom" id="YsK-po-RNN"/>
+                        <constraint firstAttribute="trailing" secondItem="pB3-75-gSL" secondAttribute="trailing" id="ZTZ-rM-K8f"/>
+                        <constraint firstItem="pB3-75-gSL" firstAttribute="leading" secondItem="TWP-IR-aya" secondAttribute="trailing" id="moy-nE-lAy"/>
+                        <constraint firstItem="Vli-fh-rzv" firstAttribute="leading" secondItem="yR6-Do-J0Z" secondAttribute="leading" id="qCX-EC-xRe"/>
+                        <constraint firstItem="Vli-fh-rzv" firstAttribute="top" secondItem="yR6-Do-J0Z" secondAttribute="top" id="qrR-5N-Qb7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yR6-Do-J0Z" secondAttribute="bottom" id="D2E-Po-MfA"/>
+                <constraint firstItem="yR6-Do-J0Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LF5-Qe-J53"/>
+                <constraint firstAttribute="trailing" secondItem="yR6-Do-J0Z" secondAttribute="trailing" id="NZ3-3t-kv7"/>
+                <constraint firstItem="yR6-Do-J0Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zqd-Fq-ROc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="14" y="-187"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="train_VIPInfo" width="263" height="145"/>
+        <image name="train_home_menberLogo" width="23" height="17"/>
+    </resources>
+</document>

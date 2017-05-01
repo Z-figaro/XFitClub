@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActionCollectionViewCell" id="gTV-IL-0wX" customClass="ActionCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="67"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 引体向上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="MB3-RH-hIK">
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="67"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flu-59-81F">
+                        <rect key="frame" x="258" y="0.0" width="35" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="rND-72-LWJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBX-3M-ExO">
+                        <rect key="frame" x="297" y="0.0" width="1" height="67"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MB3-RH-hIK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ava-MH-C6V"/>
+                <constraint firstAttribute="bottom" secondItem="flu-59-81F" secondAttribute="bottom" id="BbQ-gS-BXN"/>
+                <constraint firstItem="flu-59-81F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dn7-Jj-TYq"/>
+                <constraint firstAttribute="bottom" secondItem="BBX-3M-ExO" secondAttribute="bottom" id="Jb7-l9-Lua"/>
+                <constraint firstItem="MB3-RH-hIK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LA5-pp-6xA"/>
+                <constraint firstItem="BBX-3M-ExO" firstAttribute="leading" secondItem="flu-59-81F" secondAttribute="trailing" constant="4" id="S0G-Yf-d0J"/>
+                <constraint firstAttribute="bottom" secondItem="MB3-RH-hIK" secondAttribute="bottom" id="V1S-xI-6vG"/>
+                <constraint firstItem="flu-59-81F" firstAttribute="leading" secondItem="MB3-RH-hIK" secondAttribute="trailing" constant="15" id="cDx-6k-vWh"/>
+                <constraint firstAttribute="trailing" secondItem="BBX-3M-ExO" secondAttribute="trailing" id="h4f-yh-ndp"/>
+                <constraint firstItem="BBX-3M-ExO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tJC-H3-SUw"/>
+                <constraint firstAttribute="trailing" secondItem="flu-59-81F" secondAttribute="trailing" constant="5" id="zYN-Rl-v3o"/>
+            </constraints>
+            <size key="customSize" width="298" height="67"/>
+            <connections>
+                <outlet property="actionName" destination="MB3-RH-hIK" id="Mnp-Tm-pGE"/>
+                <outlet property="numbersOfAction" destination="flu-59-81F" id="Sxv-xg-ZQr"/>
+            </connections>
+            <point key="canvasLocation" x="158" y="73.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

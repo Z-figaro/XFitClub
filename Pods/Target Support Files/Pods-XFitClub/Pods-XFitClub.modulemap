@@ -1,0 +1,6 @@
+framework module Pods_XFitClub {
+  umbrella header "Pods-XFitClub-umbrella.h"
+
+  export *
+  module * { export * }
+}

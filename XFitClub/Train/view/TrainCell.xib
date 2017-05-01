@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kTrainCell" rowHeight="80" id="KGk-i7-Jjw" customClass="TrainCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvY-34-ETR">
+                        <rect key="frame" x="1" y="1" width="398" height="67"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyW-4m-zo7">
+                                <rect key="frame" x="337" y="0.0" width="1" height="67"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="0.5" id="FMV-df-30L"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20次" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZR-Wi-HWp">
+                                <rect key="frame" x="338" y="0.0" width="60" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kyW-4m-zo7" secondAttribute="bottom" id="8HZ-bT-pdQ"/>
+                            <constraint firstItem="VZR-Wi-HWp" firstAttribute="top" secondItem="DvY-34-ETR" secondAttribute="top" id="9oH-hQ-sRM"/>
+                            <constraint firstAttribute="trailing" secondItem="kyW-4m-zo7" secondAttribute="trailing" constant="60" id="FBb-dA-ba6"/>
+                            <constraint firstItem="kyW-4m-zo7" firstAttribute="top" secondItem="DvY-34-ETR" secondAttribute="top" id="I57-6S-aNv"/>
+                            <constraint firstAttribute="trailing" secondItem="VZR-Wi-HWp" secondAttribute="trailing" id="ZVp-OO-aWc"/>
+                            <constraint firstAttribute="bottom" secondItem="VZR-Wi-HWp" secondAttribute="bottom" id="d5N-sP-JM7"/>
+                            <constraint firstItem="VZR-Wi-HWp" firstAttribute="leading" secondItem="kyW-4m-zo7" secondAttribute="trailing" id="hSZ-rt-Lmr"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train_actionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sXH-2Q-euj">
+                        <rect key="frame" x="25" y="21" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="mAg-pe-b4Q"/>
+                            <constraint firstAttribute="width" secondItem="sXH-2Q-euj" secondAttribute="height" multiplier="1:1" id="mOk-zX-cxX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="引体向上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSo-4c-hN9">
+                        <rect key="frame" x="60" y="25" width="272" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="KuJ-8O-ahc">
+                        <rect key="frame" x="195" y="70" width="11" height="7"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KuJ-8O-ahc" secondAttribute="height" multiplier="12:8" id="ETR-6R-ae5"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nSo-4c-hN9" firstAttribute="leading" secondItem="sXH-2Q-euj" secondAttribute="trailing" constant="7" id="2nu-hB-WUR"/>
+                    <constraint firstItem="KuJ-8O-ahc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="3RB-Ba-Mf2"/>
+                    <constraint firstItem="DvY-34-ETR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="4Of-hU-GvC"/>
+                    <constraint firstAttribute="bottom" secondItem="KuJ-8O-ahc" secondAttribute="bottom" constant="2" id="Apw-CS-YSD"/>
+                    <constraint firstItem="sXH-2Q-euj" firstAttribute="centerY" secondItem="DvY-34-ETR" secondAttribute="centerY" id="DI6-Zf-UeQ"/>
+                    <constraint firstItem="sXH-2Q-euj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="PZh-L7-3KI"/>
+                    <constraint firstItem="DvY-34-ETR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-7" id="Qyt-eL-nNm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DvY-34-ETR" secondAttribute="bottom" constant="3" id="Wuz-VU-d2L"/>
+                    <constraint firstItem="nSo-4c-hN9" firstAttribute="centerY" secondItem="sXH-2Q-euj" secondAttribute="centerY" id="eOR-CG-rGe"/>
+                    <constraint firstItem="KuJ-8O-ahc" firstAttribute="top" secondItem="DvY-34-ETR" secondAttribute="bottom" constant="2" id="gDo-IP-TU8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nSo-4c-hN9" secondAttribute="trailing" constant="60" id="sI4-0r-pcL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DvY-34-ETR" secondAttribute="trailing" constant="-7" id="tGG-xm-Jx5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backView" destination="DvY-34-ETR" id="ZV9-ds-zgu"/>
+                <outlet property="name" destination="nSo-4c-hN9" id="QAZ-Hl-aTs"/>
+                <outlet property="timesLabel" destination="VZR-Wi-HWp" id="Zqs-dm-EvK"/>
+                <outlet property="trainImage" destination="sXH-2Q-euj" id="7bX-DJ-sqC"/>
+            </connections>
+            <point key="canvasLocation" x="-59" y="47"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="train_actionIcon" width="13" height="18"/>
+        <image name="train_arrow" width="10" height="4"/>
+    </resources>
+</document>
