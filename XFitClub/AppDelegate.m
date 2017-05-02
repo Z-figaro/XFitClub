@@ -87,7 +87,7 @@
 
 //计时
 -(void)countAction{
-    NSLog(@"%li",count++);
+    NSLog(@"%li",(long)count++);
 }
 //申请后台
 -(void)beginTask

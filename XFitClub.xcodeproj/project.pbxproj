@@ -86,7 +86,6 @@
 		EABC50DC1E822D6300A21D9F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC50D81E822D6300A21D9F /* HomeViewController.m */; };
 		EAC4A94C1E7FD28D00F2F2FB /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC4A94B1E7FD28D00F2F2FB /* MainTabBarViewController.m */; };
 		EAC9772F1E95F272007B01F5 /* ZPPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9772E1E95F272007B01F5 /* ZPPTextField.m */; };
-		EACBF8331EB09C8C003EEE87 /* CarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBF8321EB09C8C003EEE87 /* CarouselView.m */; };
 		EAF5623C1EA5F0C30000DB56 /* systemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5623B1EA5F0C30000DB56 /* systemViewController.m */; };
 		EAF5623F1EA600440000DB56 /* fitLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5623E1EA600440000DB56 /* fitLevelViewController.m */; };
 		EAF562421EA603560000DB56 /* fitMixNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF562411EA603560000DB56 /* fitMixNumberViewController.m */; };
@@ -268,8 +267,6 @@
 		EAC9772E1E95F272007B01F5 /* ZPPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPPTextField.m; sourceTree = "<group>"; };
 		EAC977301E96325F007B01F5 /* lanTingHardBlack_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = lanTingHardBlack_GBK.TTF; sourceTree = "<group>"; };
 		EAC977311E9634B5007B01F5 /* lanTingHardBlack GBK_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lanTingHardBlack GBK_0.TTF"; sourceTree = "<group>"; };
-		EACBF8311EB09C8C003EEE87 /* CarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselView.h; sourceTree = "<group>"; };
-		EACBF8321EB09C8C003EEE87 /* CarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselView.m; sourceTree = "<group>"; };
 		EAF5623A1EA5F0C30000DB56 /* systemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = systemViewController.h; sourceTree = "<group>"; };
 		EAF5623B1EA5F0C30000DB56 /* systemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = systemViewController.m; sourceTree = "<group>"; };
 		EAF5623D1EA600440000DB56 /* fitLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fitLevelViewController.h; sourceTree = "<group>"; };
@@ -436,7 +433,6 @@
 		6E9A118A1E840693008CB682 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				EACBF8301EB09C8C003EEE87 /* 轮播器 */,
 				EAF562461EA60EFD0000DB56 /* ZFChart */,
 				EA299D051E9CA5FB00FC3EB1 /* datePickerView */,
 				EA5712731EA0C01500DDA018 /* UIView+TargetAction.h */,
@@ -797,15 +793,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		EACBF8301EB09C8C003EEE87 /* 轮播器 */ = {
-			isa = PBXGroup;
-			children = (
-				EACBF8311EB09C8C003EEE87 /* CarouselView.h */,
-				EACBF8321EB09C8C003EEE87 /* CarouselView.m */,
-			);
-			path = "轮播器";
-			sourceTree = "<group>";
-		};
 		EAF562461EA60EFD0000DB56 /* ZFChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1014,7 @@
 				TargetAttributes = {
 					6EE878CB1E728B8A0052AA5A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GUPYY35TGF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1210,7 +1198,6 @@
 				EA5712751EA0C01500DDA018 /* UIView+TargetAction.m in Sources */,
 				EAF562421EA603560000DB56 /* fitMixNumberViewController.m in Sources */,
 				EA1E09921E99692B001619A7 /* trainViewController.m in Sources */,
-				EACBF8331EB09C8C003EEE87 /* CarouselView.m in Sources */,
 				EA299D1D1E9CBD3E00FC3EB1 /* MOFSDatePicker.m in Sources */,
 				EA252EFE1E9F19CF0060E46F /* replacePassWordViewController.m in Sources */,
 				EA8C17A41EAD89DA001FCBD8 /* baseViewController.m in Sources */,
@@ -1358,6 +1345,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1369,13 +1357,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GUPYY35TGF;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = XFitClub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aidspp-163.com.figaro.XFitClub";
+				PRODUCT_BUNDLE_IDENTIFIER = com.webuildus.XFitClub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -1385,13 +1377,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GUPYY35TGF;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XFitClub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aidspp-163.com.figaro.XFitClub";
+				PRODUCT_BUNDLE_IDENTIFIER = com.webuildus.XFitClub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

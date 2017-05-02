@@ -150,7 +150,7 @@
     NSMutableArray *dataArray = [[NSMutableArray alloc]init];
     
     for (NSInteger i=30; i<=150; i++) {
-        NSString *datastr = [NSString stringWithFormat:@"%ldkg",i];
+        NSString *datastr = [NSString stringWithFormat:@"%ldkg",(long)i];
         [dataArray addObject:datastr];
         
     }

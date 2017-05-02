@@ -7,15 +7,16 @@
 //
 
 #import "challengeViewController.h"
-#import "CarouselView.h"
 #import "ZPPAccountTool.h"
 #import "Header.h"
 #import "challengeTableViewCell.h"
 #import <SDWebImage/SDWebImageManager.h>
+#import "SDCycleScrollView.h"
 
-@interface challengeViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface challengeViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>{
     NSMutableArray *speicalChallengeArray;
     NSMutableArray *weekChallengeArray;
+    NSMutableArray *imageURLArray;
    
 }
 @property (weak, nonatomic) IBOutlet UIView *carouselView;
@@ -38,8 +39,8 @@
     
     [self initDataSource];
     [self initUserInterface];
-    
-    
+ 
+    [self banner];
     
 }
 #pragma mark - Init methods
@@ -55,7 +56,24 @@
     
             speicalChallengeArray =  responseObject[@"data"][@"zhuanxiang"];
             weekChallengeArray    =  responseObject[@"data"][@"tiaozhan"];
+            imageURLArray = [NSMutableArray new];
+            for (int i = 0 ; i < weekChallengeArray.count; i++) {
+                
+                NSString *imageString = weekChallengeArray[i][@"wod_img"];
+                [imageURLArray addObject:imageString];
+    
+            }
+            //轮播图
+            UIImage *placeholderImage = [UIImage imageNamed:@"challenge_weekContent"];
+            SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screenwidth, 220) delegate:self placeholderImage:placeholderImage];
+            cycleScrollView.currentPageDotColor = [UIColor yellowColor];
+            cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+            cycleScrollView.imageURLStringsGroup = imageURLArray;
+            
+            NSLog(@"url == %@",imageURLArray);
+            [self.carouselView addSubview:cycleScrollView];
             [self.challengeTableView reloadData];
+            
         } else {
             [SVProgressHUD showErrorWithStatus: responseObject[@"message"]];
             [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.8];
@@ -65,10 +83,6 @@
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.8];
     }];
     
-    //轮播图
-    
-    
- 
 }
 - (void)initUserInterface{
     //解决适配屏幕拉伸问题
@@ -89,10 +103,24 @@
 }
 #pragma mark - 轮播图
 - (void)banner{
+    //fix：数据源时序不同，显示不出来
+    UIImage *placeholderImage = [UIImage imageNamed:@"challenge_weekContent"];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screenwidth, 220) delegate:self placeholderImage:placeholderImage];
+    cycleScrollView.currentPageDotColor = [UIColor yellowColor];
+    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+    cycleScrollView.imageURLStringsGroup = imageURLArray;
     
-    //网络图片数据准备
-    //todo:数据准备
-//    NSArray *imageArray =[];
+    NSLog(@"url == %@",imageURLArray);
+    [self.carouselView addSubview:cycleScrollView];
+    
+}
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    
+    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
 #pragma mark - tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -110,10 +138,10 @@
     cell.sportsNumber.text = [NSString stringWithFormat:@"%@",speicalChallengeArray[indexPath.row][@"act_id"]];
     
     //完成与否
-    if (speicalChallengeArray[indexPath.row][@"state"]  == 0 ) {
-        cell.statusImage.image = [UIImage imageNamed:@"challenge_go"];
+    if ([speicalChallengeArray[indexPath.row][@"state"] isEqualToString:@"0"]) {
+        cell.statusImage.image = [UIImage imageNamed:@"challenge_false"];
     } else {
-        cell.statusImage.image = [UIImage imageNamed:@"challenge_finish"];
+        cell.statusImage.image = [UIImage imageNamed:@"challenge_true"];
     }
   
     

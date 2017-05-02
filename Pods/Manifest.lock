@@ -17,6 +17,8 @@ PODS:
   - BaiduMapKit (3.2.1)
   - IQKeyboardManager (4.0.8)
   - NinaPagerView (1.5.3)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -27,6 +29,7 @@ DEPENDENCIES:
   - BaiduMapKit
   - IQKeyboardManager
   - NinaPagerView
+  - SDCycleScrollView (~> 1.64)
   - SDWebImage (~> 3.8)
   - SVProgressHUD
 
@@ -35,9 +38,10 @@ SPEC CHECKSUMS:
   BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   NinaPagerView: 3fba378ab4d8c9e2e5c1351b2906bbbec5eea6e3
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 9d725587692058c55111c02654b84994319c12c6
+PODFILE CHECKSUM: ce0a0f07a1368f78c8dbeacc7c1bb5b04c15c4d7
 
 COCOAPODS: 1.2.0

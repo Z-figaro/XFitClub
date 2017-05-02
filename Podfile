@@ -9,4 +9,5 @@ target 'XFitClub' do
         pod 'NinaPagerView'
         pod 'SDWebImage', '~>3.8'
         pod 'BaiduMapKit'
+	pod 'SDCycleScrollView','~> 1.64'
 end
