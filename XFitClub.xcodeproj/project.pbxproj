@@ -78,6 +78,8 @@
 		EA8C17A51EAD89DA001FCBD8 /* baseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8C179C1EAD89DA001FCBD8 /* baseViewController.xib */; };
 		EA8C17A91EAD89DA001FCBD8 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C17A21EAD89DA001FCBD8 /* TableViewCell.m */; };
 		EA8C17AA1EAD89DA001FCBD8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8C17A31EAD89DA001FCBD8 /* TableViewCell.xib */; };
+		EA9AED9B1EB9B8AF00855072 /* weekChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9AED9A1EB9B8AF00855072 /* weekChallengeViewController.m */; };
+		EA9AED9E1EB9B90E00855072 /* specialChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9AED9D1EB9B90E00855072 /* specialChallengeViewController.m */; };
 		EAB898901E828EF400273E5E /* LoginNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB8988F1E828EF400273E5E /* LoginNavigationViewController.m */; };
 		EAB906B01EA702B00033AC4D /* fitMixNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB906AF1EA702B00033AC4D /* fitMixNumberTableViewCell.m */; };
 		EABC50D21E822CCC00A21D9F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC50CD1E822CCC00A21D9F /* LoginViewController.m */; };
@@ -249,6 +251,10 @@
 		EA8C17A11EAD89DA001FCBD8 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		EA8C17A21EAD89DA001FCBD8 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		EA8C17A31EAD89DA001FCBD8 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		EA9AED991EB9B8AF00855072 /* weekChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weekChallengeViewController.h; sourceTree = "<group>"; };
+		EA9AED9A1EB9B8AF00855072 /* weekChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weekChallengeViewController.m; sourceTree = "<group>"; };
+		EA9AED9C1EB9B90E00855072 /* specialChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = specialChallengeViewController.h; sourceTree = "<group>"; };
+		EA9AED9D1EB9B90E00855072 /* specialChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = specialChallengeViewController.m; sourceTree = "<group>"; };
 		EAB8988E1E828EF400273E5E /* LoginNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNavigationViewController.h; sourceTree = "<group>"; };
 		EAB8988F1E828EF400273E5E /* LoginNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNavigationViewController.m; sourceTree = "<group>"; };
 		EAB906AE1EA702B00033AC4D /* fitMixNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fitMixNumberTableViewCell.h; sourceTree = "<group>"; };
@@ -723,6 +729,10 @@
 			children = (
 				EA3925961EB083390020A8DE /* challengeViewController.h */,
 				EA3925971EB083390020A8DE /* challengeViewController.m */,
+				EA9AED991EB9B8AF00855072 /* weekChallengeViewController.h */,
+				EA9AED9A1EB9B8AF00855072 /* weekChallengeViewController.m */,
+				EA9AED9C1EB9B90E00855072 /* specialChallengeViewController.h */,
+				EA9AED9D1EB9B90E00855072 /* specialChallengeViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1165,6 +1175,7 @@
 				6EE878D11E728B8A0052AA5A /* main.m in Sources */,
 				EAF562B41EA60EFD0000DB56 /* ZFTranslucencePath.m in Sources */,
 				EAF5629C1EA60EFD0000DB56 /* UIColor+Zirkfied.m in Sources */,
+				EA9AED9E1EB9B90E00855072 /* specialChallengeViewController.m in Sources */,
 				E74C92281EA7676400F7C6E7 /* TrainCollectionCell.m in Sources */,
 				EA299D201E9CBD3E00FC3EB1 /* MOFSToolbar.m in Sources */,
 				EAF562A51EA60EFD0000DB56 /* ZFMethod.m in Sources */,
@@ -1174,6 +1185,7 @@
 				EA299D1E1E9CBD3E00FC3EB1 /* MOFSPickerManager.m in Sources */,
 				EAF5629E1EA60EFD0000DB56 /* ZFLabel.m in Sources */,
 				EAF5623F1EA600440000DB56 /* fitLevelViewController.m in Sources */,
+				EA9AED9B1EB9B8AF00855072 /* weekChallengeViewController.m in Sources */,
 				EAF562B81EA60EFD0000DB56 /* ZFWave.m in Sources */,
 				EAF562A01EA60EFD0000DB56 /* ZFXAxisLine.m in Sources */,
 				E71A58A31EA8C01E00B9E1AA /* TrainDetailViewController.m in Sources */,

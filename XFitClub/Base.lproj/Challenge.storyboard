@@ -19,7 +19,7 @@
         <!--Challenge View Controller-->
         <scene sceneID="7hd-1N-Ees">
             <objects>
-                <viewController id="4XB-r4-gnw" customClass="challengeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="challengeHome" id="4XB-r4-gnw" customClass="challengeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8n7-0T-k87"/>
                         <viewControllerLayoutGuide type="bottom" id="8yd-1m-34Y"/>
@@ -116,22 +116,22 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="challengeCell" rowHeight="40" id="co9-Lh-grk" customClass="challengeTableViewCell">
-                                        <rect key="frame" x="0.0" y="347" width="375" height="40"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="challengeCell" rowHeight="45" id="co9-Lh-grk" customClass="challengeTableViewCell">
+                                        <rect key="frame" x="0.0" y="347" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="co9-Lh-grk" id="fva-zN-IRf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GDr-bX-iyT">
-                                                    <rect key="frame" x="257" y="1" width="38" height="38"/>
+                                                    <rect key="frame" x="270" y="3.5" width="38" height="38"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="challenge_go" translatesAutoresizingMaskIntoConstraints="NO" id="5MS-7k-QPw">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="challenge_go" translatesAutoresizingMaskIntoConstraints="NO" id="5MS-7k-QPw">
                                                             <rect key="frame" x="5" y="0.0" width="33" height="38"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="5MS-7k-QPw" firstAttribute="centerY" secondItem="GDr-bX-iyT" secondAttribute="centerY" id="4a4-fO-nq2"/>
                                                         <constraint firstAttribute="width" constant="38" id="5oa-ww-gx9"/>
@@ -143,7 +143,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5o-ZY-HCM">
-                                                    <rect key="frame" x="37" y="1" width="215" height="38"/>
+                                                    <rect key="frame" x="50" y="3.5" width="215" height="38"/>
                                                     <subviews>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="challenge_trainFrame" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-S5-f2A">
                                                             <rect key="frame" x="0.0" y="0.0" width="219" height="38"/>
@@ -156,7 +156,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HR9-19-BIg">
-                                                            <rect key="frame" x="199" y="11" width="11" height="15"/>
+                                                            <rect key="frame" x="203" y="11" width="11" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="RcQ-dP-Qlu"/>
                                                                 <constraint firstAttribute="width" constant="11" id="T4Q-i5-0Pl"/>
@@ -166,13 +166,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDG-t0-mlP">
-                                                            <rect key="frame" x="42" y="0.0" width="136.5" height="38"/>
+                                                            <rect key="frame" x="42" y="0.0" width="137" height="38"/>
                                                             <fontDescription key="fontDescription" name="FZLTHK--GBK1-0" family="FZLanTingHei-R-GBK" pointSize="16"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLY-wY-c1J">
-                                                            <rect key="frame" x="188" y="8" width="13.5" height="21"/>
+                                                            <rect key="frame" x="188.5" y="8" width="13.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="13.5" id="46h-C7-eca"/>
                                                                 <constraint firstAttribute="height" constant="21" id="VEv-o4-bTK"/>
@@ -191,12 +191,12 @@
                                                         <constraint firstItem="HR9-19-BIg" firstAttribute="centerY" secondItem="gIu-S5-f2A" secondAttribute="centerY" id="HuD-QQ-sYx"/>
                                                         <constraint firstItem="OLY-wY-c1J" firstAttribute="leading" secondItem="JDG-t0-mlP" secondAttribute="trailing" constant="9.5" id="LwI-Sf-rP4"/>
                                                         <constraint firstAttribute="bottom" secondItem="gIu-S5-f2A" secondAttribute="bottom" id="Rmr-qZ-jdd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="HR9-19-BIg" secondAttribute="trailing" constant="5" id="TT4-v9-eKp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HR9-19-BIg" secondAttribute="trailing" constant="1" id="TT4-v9-eKp"/>
                                                         <constraint firstAttribute="height" constant="38" id="VbI-7c-48M"/>
                                                         <constraint firstAttribute="trailing" secondItem="gIu-S5-f2A" secondAttribute="trailing" constant="-4" id="WTo-qo-C8g"/>
                                                         <constraint firstItem="HqB-Of-HKN" firstAttribute="leading" secondItem="C5o-ZY-HCM" secondAttribute="leading" constant="5" id="evg-VN-LGF"/>
                                                         <constraint firstItem="gIu-S5-f2A" firstAttribute="leading" secondItem="C5o-ZY-HCM" secondAttribute="leading" id="h1c-jA-IIi"/>
-                                                        <constraint firstItem="HR9-19-BIg" firstAttribute="leading" secondItem="OLY-wY-c1J" secondAttribute="trailing" constant="-2.5" id="hTc-mE-i9t"/>
+                                                        <constraint firstItem="HR9-19-BIg" firstAttribute="leading" secondItem="OLY-wY-c1J" secondAttribute="trailing" constant="1" id="hTc-mE-i9t"/>
                                                         <constraint firstItem="HqB-Of-HKN" firstAttribute="centerY" secondItem="C5o-ZY-HCM" secondAttribute="centerY" id="hpQ-AM-3Eh"/>
                                                         <constraint firstItem="gIu-S5-f2A" firstAttribute="top" secondItem="C5o-ZY-HCM" secondAttribute="top" id="kaY-MB-yzu"/>
                                                     </constraints>
@@ -205,7 +205,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="GDr-bX-iyT" firstAttribute="centerY" secondItem="gIu-S5-f2A" secondAttribute="centerY" id="1qG-ux-G33"/>
-                                                <constraint firstItem="C5o-ZY-HCM" firstAttribute="centerX" secondItem="fva-zN-IRf" secondAttribute="centerX" constant="-43" id="9QJ-q3-mbE"/>
+                                                <constraint firstItem="C5o-ZY-HCM" firstAttribute="centerX" secondItem="fva-zN-IRf" secondAttribute="centerX" constant="-30" id="9QJ-q3-mbE"/>
                                                 <constraint firstItem="GDr-bX-iyT" firstAttribute="leading" secondItem="C5o-ZY-HCM" secondAttribute="trailing" constant="5" id="Gpf-xC-7mZ"/>
                                                 <constraint firstItem="C5o-ZY-HCM" firstAttribute="centerY" secondItem="fva-zN-IRf" secondAttribute="centerY" id="PeD-vP-L2N"/>
                                             </constraints>
@@ -238,15 +238,85 @@
                             <constraint firstItem="DS5-5U-36m" firstAttribute="leading" secondItem="9eC-VQ-UgV" secondAttribute="leading" id="zYg-Da-nAG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q9y-S2-4gi"/>
+                    <navigationItem key="navigationItem" id="Q9y-S2-4gi">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="yeI-M0-p6P">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zi8-Gt-1KT">
+                                <rect key="frame" x="255" y="11" width="104" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="challenge_caption"/>
+                                <connections>
+                                    <segue destination="2Re-Mg-QSh" kind="push" id="GKs-oL-9Qr"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carouselView" destination="WIz-z7-zsP" id="NKF-YV-1Pr"/>
                         <outlet property="challengeTableView" destination="zl6-1T-8Ak" id="5va-t1-38E"/>
+                        <segue destination="BmV-fu-s0e" kind="push" identifier="weekSegue" id="Q5C-P2-bDa"/>
+                        <segue destination="PLy-eg-Fuc" kind="push" identifier="speicalSegue" id="Mfm-Wj-I54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTD-Yl-v50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-628" y="826.23688155922048"/>
+        </scene>
+        <!--Week Challenge View Controller-->
+        <scene sceneID="iyX-Nr-LfC">
+            <objects>
+                <viewController storyboardIdentifier="weekChallenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BmV-fu-s0e" customClass="weekChallengeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BFR-Wc-mSZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnC-Hx-rdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5S4-JR-CRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1B7-54-7NJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceL-Yd-iEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="433"/>
+        </scene>
+        <!--Special Challenge View Controller-->
+        <scene sceneID="v7a-DT-rk4">
+            <objects>
+                <viewController storyboardIdentifier="specialChallenge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PLy-eg-Fuc" customClass="specialChallengeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1PV-JD-adj"/>
+                        <viewControllerLayoutGuide type="bottom" id="JdO-8U-LAO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ldt-ux-7qR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zNQ-im-PGO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcV-hZ-F23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="1116"/>
+        </scene>
+        <!--挑战说明-->
+        <scene sceneID="5dZ-L2-hrU">
+            <objects>
+                <viewController id="2Re-Mg-QSh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lBl-J2-28d"/>
+                        <viewControllerLayoutGuide type="bottom" id="5CN-vC-c3p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RxF-Ag-ZIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="挑战说明" id="FUS-1e-X65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gM-tZ-LnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FvA-jt-RrJ">
@@ -271,6 +341,7 @@
     </scenes>
     <resources>
         <image name="challenge_background" width="375" height="840"/>
+        <image name="challenge_caption" width="50" height="11"/>
         <image name="challenge_go" width="39" height="38"/>
         <image name="challenge_specific" width="110" height="23"/>
         <image name="challenge_specificBackground" width="374" height="39"/>

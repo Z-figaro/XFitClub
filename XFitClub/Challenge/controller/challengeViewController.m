@@ -12,6 +12,8 @@
 #import "challengeTableViewCell.h"
 #import <SDWebImage/SDWebImageManager.h>
 #import "SDCycleScrollView.h"
+#import "weekChallengeViewController.h"
+#import "specialChallengeViewController.h"
 
 @interface challengeViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>{
     NSMutableArray *speicalChallengeArray;
@@ -40,7 +42,7 @@
     [self initDataSource];
     [self initUserInterface];
  
-    [self banner];
+  
     
 }
 #pragma mark - Init methods
@@ -101,26 +103,18 @@
     //取消分割线
     self.challengeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
-#pragma mark - 轮播图
-- (void)banner{
-    //fix：数据源时序不同，显示不出来
-    UIImage *placeholderImage = [UIImage imageNamed:@"challenge_weekContent"];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screenwidth, 220) delegate:self placeholderImage:placeholderImage];
-    cycleScrollView.currentPageDotColor = [UIColor yellowColor];
-    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-    cycleScrollView.imageURLStringsGroup = imageURLArray;
-    
-    NSLog(@"url == %@",imageURLArray);
-    [self.carouselView addSubview:cycleScrollView];
-    
-}
+
 #pragma mark - SDCycleScrollViewDelegate
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"---点击了第%ld张图片", (long)index);
     
-    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Challenge" bundle:nil];
+    weekChallengeViewController *view = [story instantiateViewControllerWithIdentifier:@"weekChallenge"];
+    [self presentViewController: view animated:YES completion:nil];
+    
+    view.weekWodID = weekChallengeArray[index][@"wod_id"];
 }
 #pragma mark - tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -135,17 +129,26 @@
     cell.sportsName.text = [NSString stringWithFormat:@"%@", speicalChallengeArray[indexPath.row][@"act_name"]];
     
     [cell.sportsImage sd_setImageWithURL:[NSURL URLWithString:speicalChallengeArray[indexPath.row][@"act_img"]] placeholderImage:[UIImage imageNamed:@"train_actionIcon"]];
-    cell.sportsNumber.text = [NSString stringWithFormat:@"%@",speicalChallengeArray[indexPath.row][@"act_id"]];
+    cell.sportsNumber.text = [NSString stringWithFormat:@"%@",speicalChallengeArray[indexPath.row][@"act_number"]];
     
     //完成与否
-    if ([speicalChallengeArray[indexPath.row][@"state"] isEqualToString:@"0"]) {
-        cell.statusImage.image = [UIImage imageNamed:@"challenge_false"];
+    if ([speicalChallengeArray[indexPath.row][@"state"] isEqualToString:@"failure"]) {
+        cell.statusImage.image = [UIImage imageNamed:@"challenge_go"];
+    } else if ([speicalChallengeArray[indexPath.row][@"state"] isEqualToString:@"success"]) {
+        cell.statusImage.image = [UIImage imageNamed:@"challenge_finish"];
     } else {
-        cell.statusImage.image = [UIImage imageNamed:@"challenge_true"];
+        cell.statusImage.image = [UIImage imageNamed:@"challenge_finish"];//todo:给了图片，修改审核中状态
     }
-  
     
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Challenge" bundle:nil];
+    specialChallengeViewController *View = [story instantiateViewControllerWithIdentifier:@"specialChallenge"];
+    [self presentViewController: View animated:YES completion:nil];
+    
+    View.specialWodID = speicalChallengeArray[indexPath.row][@"wod_id"];
 }
 
 //取消提示器
